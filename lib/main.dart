@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.teal,
         // body: SafeArea(
@@ -72,12 +72,13 @@ class MyApp extends StatelessWidget {
         // ),
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              CircleAvatar(
+              const CircleAvatar(
                 radius: 50,
                 backgroundImage: AssetImage('images/nur.jpg'),
               ),
-              Text(
+              const Text(
                 'Nur Farah',
                 style: TextStyle(
                   fontFamily: 'Pacifico',
@@ -87,14 +88,53 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               Text(
-                'Flutter Developer',
+                'Full-Stack Mobile App Developer',
                 style: TextStyle(
                     fontFamily: 'Source Sans Pro',
-                    fontSize: 30.0,
-                    color: Colors.teal,
+                    fontSize: 20.0,
+                    color: Colors.teal.shade100,
                     fontWeight: FontWeight.bold,
-                    letterSpacing: 2.0),
+                    letterSpacing: 2.5),
               ),
+              const SizedBox(
+                height: 20.0,
+                width: 170.0,
+                child: Divider(),
+              ),
+              Card(
+                  margin: const EdgeInsets.symmetric(
+                      vertical: 10.0, horizontal: 25.0),
+                  child: ListTile(
+                    leading: const Icon(
+                      Icons.phone,
+                      color: Colors.teal,
+                    ),
+                    title: Text(
+                      '+252 612 109 565',
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        fontFamily: 'Source Sans Pro',
+                        color: Colors.teal[900],
+                      ),
+                    ),
+                  )),
+              Card(
+                  margin: const EdgeInsets.symmetric(
+                      vertical: 10.0, horizontal: 25.0),
+                  child: ListTile(
+                    leading: const Icon(
+                      Icons.email,
+                      color: Colors.teal,
+                    ),
+                    title: Text(
+                      'nuurfaarax15@gmail.com',
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        fontFamily: 'Source Sans Pro',
+                        color: Colors.teal[900],
+                      ),
+                    ),
+                  )),
             ],
           ),
         ),
